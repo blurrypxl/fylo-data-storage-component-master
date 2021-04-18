@@ -1,0 +1,149 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* border: 2px solid lime; */
+    font-size: 14px;
+    font-family: 'Raleway',Courier New, Courier, monospace;
+    font-weight: 400;
+
+    /* Primary-Colors */
+    --primaryColor1: hsl(6, 100%, 80%);
+    --primaryColor2: hsl(335, 100%, 65%);
+
+    /* Neutral-Colors */
+    --paleBlue: hsl(243, 100%, 93%);
+    --grayishBlue: hsl(229, 7%, 55%);
+    --darkBlue: hsl(228, 56%, 26%);
+    --verydarkBlue: hsl(229, 57%, 11%);
+
+    /* Mengatur Tinggi & Lebar Element Body */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    /* Mengatur Posisi Content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+#navbar {
+    background-color: var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 25px;
+    border-top-right-radius: 90px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#navbar .logo {
+    margin-bottom: 15px;
+}
+#navbar .nav-links {
+    margin-top: 15px;
+    display: flex;
+}
+#navbar .nav-links .links {
+    background-color: var(--verydarkBlue);
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#data-box {
+    /* border: 2px solid blue; */
+    margin: 20px;
+    height: auto;
+    box-sizing: border-box;
+}
+#data-box .data {
+    /* border: 2px solid crimson; */
+    border-radius: 10px;
+    background-color: var(--darkBlue);
+    width: 280px;
+    padding: 30px 10px;
+    text-align: center;
+}
+#data-box .data .data-bar {
+    padding: 10px 0;
+}
+#data-box .data .data-bar .bar-parent {
+    border: 2px solid var(--verydarkBlue);
+    background-color: var(--verydarkBlue);
+    border-radius: 10px;
+    margin: 10px 0;
+    height: 10px;
+}
+#data-box .data .data-bar .bar-parent .bar-child {
+    border-radius: 10px;
+    width: 75%;
+    background: linear-gradient(45deg, var(--primaryColor1), var(--primaryColor2));
+    height: 10px;
+}
+#data-box .data .data-bar .bar-desc {
+    display: flex;
+    justify-content: space-between;
+}
+#data-box .data-left {
+    border-radius: 7px;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    font-size: 35px;
+    margin: 0 auto;
+    padding: 7px;
+    width: 150px;
+    text-align: center;
+
+    position: relative;
+    bottom: 10%;
+}
+#data-box .data-left span {
+    font-weight: 400;
+    font-size: small;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 20px;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 743px) {
+    body {
+        flex-direction: row;
+
+        background-color: var(--verydarkBlue);
+        background-image: url(../images/bg-desktop.png);
+        background-attachment: fixed;
+        background-position: bottom;
+        background-size: contain;
+    }
+}
