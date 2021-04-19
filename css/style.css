@@ -104,8 +104,20 @@ main #data-box .data .data-bar .bar-parent {
 main #data-box .data .data-bar .bar-parent .bar-child {
     border-radius: 10px;
     width: 75%;
-    background: linear-gradient(45deg, var(--primaryColor1), var(--primaryColor2));
     height: 10px;
+    background: linear-gradient(45deg, var(--primaryColor1), var(--primaryColor2));
+    position: relative;
+    z-index: 1;
+}
+main #data-box .data .data-bar .bar-parent .bar-child::before {
+    content: '';
+    border-radius: 50%;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 95%;
+    z-index: 2;
 }
 main #data-box .data .data-bar .bar-desc {
     display: flex;
@@ -173,15 +185,17 @@ main #data-box .data-left span {
         padding: 30px 20px;
         text-align: left;
     }
+    main #data-box .data .data-bar .bar-parent .bar-child::before {
+        left: 98%;
+    }
     main #data-box .data-left {
         position: absolute;
         right: 6%;
         bottom: 85%;
         z-index: 1;
     }
-    main #data-box .data-left::after {
+    main #data-box .data-left::before {
         content: '';
-        /* background-color: blue; */
         width: 0;
         height: 0;
         border-left: 12px solid transparent;
