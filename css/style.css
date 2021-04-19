@@ -8,7 +8,7 @@
 }
 
 body {
-    border: 2px solid lime;
+    /* border: 2px solid lime; */
     font-size: 14px;
     font-family: 'Raleway',Courier New, Courier, monospace;
     font-weight: 400;
@@ -119,7 +119,7 @@ main #data-box .data-left {
     font-size: 35px;
     margin: 0 auto;
     padding: 7px;
-    width: 150px;
+    width: 130px;
     text-align: center;
 
     position: relative;
@@ -146,9 +146,8 @@ main #data-box .data-left span {
 
         background-color: var(--verydarkBlue);
         background-image: url(../images/bg-desktop.png);
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-position: bottom;
-        background-size: contain;
     }
 
     main {
@@ -171,7 +170,22 @@ main #data-box .data-left span {
     }
     main #data-box .data-left {
         position: absolute;
-        right: 7%;
-        bottom: 80%;
+        right: 6%;
+        bottom: 85%;
+        z-index: 1;
+    }
+    main #data-box .data-left::after {
+        content: '';
+        /* background-color: blue; */
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 24px solid white;
+        border-top: 12px solid white;
+        border-bottom: 24px solid transparent;
+        position: absolute;
+        top: 65%;
+        left: 75%;
+        z-index: -1;
     }
 }
